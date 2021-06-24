@@ -22,6 +22,11 @@ export default {
               TabTwoScreen: 'two',
             },
           },
+          Club: {
+            screens: {
+              ClubScreen: 'club',
+            },
+          }
         },
       },
       NotFound: '*',
