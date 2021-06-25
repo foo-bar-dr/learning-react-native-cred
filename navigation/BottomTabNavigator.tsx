@@ -10,7 +10,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import ClubScreen from '../screens/ClubScreen';
+import ClubScreen from '../screens/Club/ClubScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, ClubParamlist, TabOneParamList, TabTwoParamList } from '../types';
