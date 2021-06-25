@@ -13,14 +13,14 @@ const LinkingConfigObject: LinkingOptions = {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Money: {
             screens: {
-              TabOneScreen: 'one',
+              TabOneScreen: 'money',
             },
           },
-          TabTwo: {
+          Cards: {
             screens: {
-              TabTwoScreen: 'two',
+              TabTwoScreen: 'cards',
             },
           },
           Home: {
