@@ -5,11 +5,21 @@ import { cardStyles } from "../../common/Styles";
 
 import { Text, View } from "../../components/Themed";
 
+
+import mockRewards from "../../mock-data/store.json";
+
+import AirpodsImage from "../../assets/images/other/airpods-pro.png";
 import CreditCard from "../../assets/images/other/credit-card.png";
+import Gift from "../../assets/images/rewards/gifts.png";
+
 import { TouchableOpacity } from "react-native";
 
 export default function HomeScreen() {
   return (
+      <>
+      <View>
+          <Text>Profile</Text>
+      </View>
     <ScrollView>
       <View>
         <View
@@ -49,14 +59,14 @@ export default function HomeScreen() {
                   borderRadius: 20,
                   width: 100,
                   alignItems: "center",
-                  backgroundColor: "white",
+                  backgroundColor: "black",
                 }}
               >
                 <Text
                   style={{
-                    color: "black",
                     fontFamily: "sans-serif",
                     padding: 10,
+                    fontSize: 11,
                   }}
                 >
                   Pay now
@@ -71,7 +81,90 @@ export default function HomeScreen() {
           ></Image>
         </View>
       </View>
+
+      <View>
+        <View
+          style={[
+            cardStyles.card,
+            cardStyles.largeCard,
+            { backgroundColor: "#4066E0" },
+          ]}
+        >
+          <Image
+            style={cardStyles.largeCardImage}
+            resizeMode="contain"
+            source={Gift}
+          ></Image>
+          <Text
+            style={[
+              cardStyles.largeCardTopText,
+              {
+                textAlign: "center",
+              },
+            ]}
+          >
+            An assured cashback of 500 is waiting for you
+          </Text>
+
+          <Text
+            style={[
+              cardStyles.largeCardBottomText,
+              {
+                margin: 10,
+                fontSize: 11,
+                width: "60%",
+              },
+            ]}
+          >
+            You and your friends earn minimum cashback of Rs 500 when your
+            friend makes a payment on CRED
+          </Text>
+
+          <TouchableOpacity>
+            <View
+              style={{
+                borderRadius: 20,
+                width: 100,
+                alignItems: "center",
+                backgroundColor: "black",
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "sans-serif",
+                  padding: 10,
+                  fontSize: 11,
+                }}
+              >
+                Win now
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View
+          style={[
+            cardStyles.card,
+            cardStyles.largeCard,
+            { backgroundColor: "#333333" },
+          ]}
+        >
+          <Text style={cardStyles.largeCardTopText}>
+            {mockRewards?.featured1?.topText}
+          </Text>
+          <Image
+            style={cardStyles.largeCardImage}
+            resizeMode="contain"
+            source={AirpodsImage}
+          ></Image>
+          <Text style={cardStyles.largeCardBottomText}>
+            {mockRewards?.featured1?.bottomText}
+          </Text>
+        </View>
+
+      </View>
     </ScrollView>
+    </>
   );
 }
 
