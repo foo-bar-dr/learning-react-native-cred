@@ -23,6 +23,13 @@ const LinkingConfigObject: LinkingOptions = {
               TabTwoScreen: 'two',
             },
           },
+          Home: {
+            screens: {
+              HomeScreen: {
+                path: 'home'
+              }
+            }
+          },
           Club: {
             screens: {
               ClubScreen: {

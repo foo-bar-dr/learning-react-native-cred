@@ -11,9 +11,10 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ClubScreen from '../screens/Club/ClubScreen';
+import HomeScreen from '../screens/Home/HomeScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, ClubParamlist, TabOneParamList, TabTwoParamList } from '../types';
+import { BottomTabParamList, ClubParamlist, HomeParamList, TabOneParamList, TabTwoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -40,6 +41,15 @@ export default function BottomTabNavigator() {
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Home"
+        component={HomeNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="home" color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
@@ -99,8 +109,22 @@ function ClubNavigator() {
       <ClubStack.Screen
         name="ClubScreen"
         component={ClubScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'Club' }}
       />
     </ClubStack.Navigator>
+  );
+}
+
+const HomeStack = createStackNavigator<HomeParamList>();
+
+function HomeNavigator() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerTitle: 'Home' }}
+      />
+    </HomeStack.Navigator>
   );
 }
