@@ -1,0 +1,40 @@
+{
+    "cashback1" : [
+        {
+            "title": "Cashback upto ₹1,000"
+        },
+        {
+            "title": "Cashback upto ₹500"
+        }
+    ],
+    "offers": [
+        {
+            "title": "Give your travel plans a boost"
+        },
+        {
+            "title": "Get a headstart in your fitness journey"
+        },
+        {
+            "title": "Stay hydrated, royally"
+        }
+    ],
+    "rewards": [
+        {
+            "title": "Earn upto ₹1,00,000"
+        },
+        {
+            "title": "Earn upto ₹50,000"
+        },
+        {
+            "title": "Earn upto ₹10,000"
+        }
+    ],
+    "cashback2" : [
+        {
+            "title": "Earn upto ₹5,000"
+        },
+        {
+            "title": "Earn upto ₹500"
+        }
+    ]
+}
