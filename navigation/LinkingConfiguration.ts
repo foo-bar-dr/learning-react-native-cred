@@ -4,9 +4,10 @@
  * https://reactnavigation.org/docs/configuring-links
  */
 
+import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 
-export default {
+const LinkingConfigObject: LinkingOptions = {
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
@@ -24,7 +25,14 @@ export default {
           },
           Club: {
             screens: {
-              ClubScreen: 'club',
+              ClubScreen: {
+                path: 'club',
+                screens: {
+                  Rewards: 'rewards',
+                  Travel: 'travel',
+                  Store: 'store',
+                }
+              },
             },
           }
         },
@@ -32,4 +40,6 @@ export default {
       NotFound: '*',
     },
   },
-};
+}
+
+export default LinkingConfigObject;
