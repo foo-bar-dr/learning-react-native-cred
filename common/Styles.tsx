@@ -17,6 +17,11 @@ export const cardStyles = StyleSheet.create({
     height: 1,
     width: "80%",
   },
+  cardCarouselTitle: {
+    margin: 20,
+    marginBottom: 0,
+    fontSize: 18
+  },
   card: {
     // backgroundColor: "red",
     minWidth: 150,
@@ -61,4 +66,25 @@ export const cardStyles = StyleSheet.create({
     flex: 6,
     height: "100%",
   },
+  largeCard: {
+    width: width * 0.9,
+    height: width * 0.9,
+  },
+  largeCardTopText: {
+      fontSize: 16,
+      flex: 1,
+      marginTop: 10,
+      fontWeight: 'bold'
+  },
+  largeCardImage: {
+    //   margin: 10,
+      width: "100%",
+      flex: 5,
+      height: "100%",
+  },
+  largeCardBottomText: {
+      textAlign: "center",
+      flex: 1,
+      fontSize: 16
+  }
 });
