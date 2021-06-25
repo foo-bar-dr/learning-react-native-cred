@@ -29,6 +29,7 @@ export default function HomeScreen() {
           display: "flex",
           flexDirection: "row",
           margin: 25,
+          marginLeft: 10,
           justifyContent: "space-between",
         }}
       >
@@ -68,6 +69,21 @@ export default function HomeScreen() {
       </View>
       <ScrollView>
         <View>
+            <Text style={{
+                marginTop: 10,
+                marginLeft: 25,
+                fontSize: 22 
+            }}>
+                hello, Dhruv
+            </Text>
+            <Text style={{
+                marginTop: 10,
+                marginLeft: 25,
+                fontSize: 14 
+            }}>
+                Here are today's{"\n"}
+                recommendations for you
+            </Text>
           <View
             style={[
               cardStyles.card,
@@ -133,7 +149,7 @@ export default function HomeScreen() {
             style={[
               cardStyles.card,
               cardStyles.largeCard,
-              { backgroundColor: "#4066E0" },
+              { backgroundColor: "#4066E0", height: 500 },
             ]}
           >
             <Image

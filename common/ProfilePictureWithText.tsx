@@ -7,13 +7,13 @@ const ProfilePictureWithText = ({ image, text}: any) => {
     <View
       style={{
         display: "flex",
-        marginRight: 15
+        marginLeft: 15
       }}
     >
       <Image
         style={{
           height: 45,
-          borderRadius: 22.5,
+          borderRadius: 100,
           width: 45,
           marginBottom: 10,
           alignSelf: "center",
